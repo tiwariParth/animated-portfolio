@@ -1,24 +1,35 @@
-.navbar{
-    height: 100px;
-    
-    .wrapper{
-        max-width: 1024px;
-        margin: 0 auto;
+.navbar {
+    height: clamp(50px, 8vh, 70px); /* Responsive height */
+    width: 100%;
+    position: fixed; /* Fix the navbar at the top */
+    background: rgba(29, 28, 28, 0.8);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0 clamp(10px, 4vw, 20px); /* Responsive padding */
+  
+    .wrapper {
+      max-width: 1024px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+  
+      span {
+        font-weight: bold;
+        font-size: clamp(16px, 2vw, 24px); /* Responsive font size */
+      }
+  
+      .social {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        
-        span{
-            font-weight: bold;
+        gap: clamp(10px, 2vw, 20px); /* Responsive gap between social icons */
+  
+        img {
+          width: clamp(16px, 2vw, 24px); /* Responsive width */
+          height: clamp(16px, 2vw, 24px); /* Responsive height */
         }
-        .social{
-            display: flex;
-            gap:20px;
-            img{
-                width:18px;
-                height:18px;
-            }
-        }
+      }
     }
-}
+  }
+  
