@@ -9,6 +9,7 @@
 
     .bg{
         position: fixed;
+        z-index: 999;
         top: 0;
         left: 0;
         bottom: 0;
@@ -34,8 +35,8 @@
         height: 20px;
         border-radius: 50%;
         position: fixed;
-        top: 15px;
-        left: 15px;
+        top: 17px;
+        left: 40px;
         background-color: transparent;
         border: none;
         cursor: pointer;

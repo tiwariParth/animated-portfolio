@@ -1,12 +1,20 @@
 .navbar {
     height: clamp(50px, 8vh, 70px); /* Responsive height */
     width: 100%;
-    position: fixed; /* Fix the navbar at the top */
-    background: rgba(29, 28, 28, 0.8);
+    position: absolute; /* Position absolutely to the top */
     top: 0;
     left: 0;
-    z-index: 1000;
     padding: 0 clamp(10px, 4vw, 20px); /* Responsive padding */
+    z-index: 1000; /* Set the z-index to 1000 */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
+  
+    &.navbar--transparent {
+      background-color: transparent; /* Transparent background at the top */
+    }
+  
+    &.navbar--solid {
+      background-color: rgba(29, 28, 28, 0.8); /* Solid background when not at the top */
+    }
   
     .wrapper {
       max-width: 1024px;
