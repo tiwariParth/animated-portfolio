@@ -1,67 +1,100 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./services.scss";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+
+const variants = {
+  inital: {
+    x: -500,
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.5,
+    },
+  },
+};
 
 const Services = () => {
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
   return (
-    <motion.div className="services">
-      <motion.div className="textContainer">
+    <motion.div
+      className="services"
+      variants={variants}
+      initial="inital"
+      // whileInView="animate"
+      ref={ref}
+      animate={isInView && "animate"}
+    >
+      <motion.div className="textContainer" variants={variants}>
         <motion.p>
           I foucs on helping your brand grow <br /> and move forward.
         </motion.p>
         <hr />
       </motion.div>
-      <motion.div className="titleContainer">
+      <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <img src="/people.webp" alt="" />
           <h1>
-            <b>Unique</b> Ideas
+            <motion.b whileHover={{ color: "orange" }}>Unique</motion.b> Ideas
           </h1>
         </div>
         <div className="title">
           <h1>
-            <b>For Your</b> Buissness
+            <motion.b whileHover={{ color: "orange" }}>For Your</motion.b>{" "}
+            Buissness
           </h1>
-          <button>WHAT WE DO?</button>
+          <motion.button whileHover={{ background:"gray" }}>WHAT WE DO?</motion.button>
         </div>
       </motion.div>
-      <motion.div className="listContainer">
-        <div className="box">
+      <motion.div className="listContainer" variants={variants}>
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
           <h2>Branding</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos illum
-            dolore consectetur sapiente voluptatum! Corrupti quo corporis itaque
-            cumque, maxime voluptas fugiat repudiandae alias nobis. A vel
-            architecto voluptates exercitationem error nemo minus sed quod,
-            labore repellendus. Perferendis nam iste velit alias sed, libero
-            veniam, est quo, temporibus molestias aliquid.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            facilis facere, perferendis commodi, odio perspiciatis, quidem alias
+            aspernatur aut minus natus dolorem expedita ducimus error.
+            Temporibus optio provident quasi nesciunt.
           </p>
           <button>Go</button>
-        </div>
-        <div className="box">
+        </motion.div>
+        <motion.div
+          className="box"
+          whileHover={{
+            background: "lightgray",
+            color: "black",
+          }}
+        >
           <h2>Branding</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos illum
-            dolore consectetur sapiente voluptatum! Corrupti quo corporis itaque
-            cumque, maxime voluptas fugiat repudiandae alias nobis. A vel
-            architecto voluptates exercitationem error nemo minus sed quod,
-            labore repellendus. Perferendis nam iste velit alias sed, libero
-            veniam, est quo, temporibus molestias aliquid.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            facilis facere, perferendis commodi, odio perspiciatis, quidem alias
+            aspernatur aut minus natus dolorem expedita ducimus error.
+            Temporibus optio provident quasi nesciunt.
           </p>
           <button>Go</button>
-        </div>
-        <div className="box">
+        </motion.div>
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
           <h2>Branding</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos illum
-            dolore consectetur sapiente voluptatum! Corrupti quo corporis itaque
-            cumque, maxime voluptas fugiat repudiandae alias nobis. A vel
-            architecto voluptates exercitationem error nemo minus sed quod,
-            labore repellendus. Perferendis nam iste velit alias sed, libero
-            veniam, est quo, temporibus molestias aliquid.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            facilis facere, perferendis commodi, odio perspiciatis, quidem alias
+            aspernatur aut minus natus dolorem expedita ducimus error.
+            Temporibus optio provident quasi nesciunt.
           </p>
           <button>Go</button>
-        </div>
+        </motion.div>
       </motion.div>
     </motion.div>
   );

@@ -3,8 +3,26 @@ import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../../assests/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 // import "animate.css";
+import { motion } from "framer-motion";
 import "./hero.scss";
 import TrackVisibility from "react-on-screen";
+
+const variants = {
+  initial: {
+    x: -500,
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.5,
+    },
+  },
+};
 
 export const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -53,16 +71,19 @@ export const Hero = () => {
   };
 
   return (
-    <section className="banner" id="home">
+    <motion.section className="banner" id="home">
       <Container>
-        <Row className="aligh-items-center rows">
+        <motion.Row className="aligh-items-center rows">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div
+                <motion.div
                   className={
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
+                  variants={variants}
+                  initial="initial"
+                  whileInView={"animate"}
                 >
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>
@@ -86,7 +107,7 @@ export const Hero = () => {
                     <a href="#Contact">Lets Connect</a>{" "}
                     <ArrowRightCircle size={25} />
                   </button>
-                </div>
+                </motion.div>
               )}
             </TrackVisibility>
           </Col>
@@ -103,8 +124,8 @@ export const Hero = () => {
               )}
             </TrackVisibility>
           </Col>
-        </Row>
+        </motion.Row>
       </Container>
-    </section>
+    </motion.section>
   );
 };
