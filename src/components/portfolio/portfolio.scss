@@ -34,6 +34,13 @@
       h2 {
         font-size: 36px; /* Adjust as needed */
         margin-bottom: 20px; /* Space between title and videos */
+        background: rgba(
+          26,
+          25,
+          25,
+          0.1
+        ); /* Adjust the color and opacity as needed */
+        backdrop-filter: blur(200px);
       }
 
       .videoContainer {

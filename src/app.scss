@@ -1,28 +1,27 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "DM Sans", sans-serif;
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 html {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #000002ef;
-    color: lightgray;
+  background: url("/stars.png");
+  background-color: #000002ef;
+  color: lightgray;
 }
 
-
-section{
-    height: 100vh;
-    scroll-snap-align: center;
+section {
+  height: 100vh;
+  scroll-snap-align: center;
 }
