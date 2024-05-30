@@ -13,7 +13,7 @@ const variants = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.3,
+      duration: 0.1,
       staggerChildren: 0.5,
     },
   },
@@ -21,7 +21,7 @@ const variants = {
 
 const Services = () => {
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-90px" });
+  const isInView = useInView(ref, { margin: "-100px" });
   return (
     <motion.div
       className="services"
@@ -48,16 +48,11 @@ const Services = () => {
             <motion.b whileHover={{ color: "orange" }}>For Your</motion.b>{" "}
             Buissness
           </h1>
-          <motion.button whileHover={{ background: "gray" }}>
-            WHAT WE DO?
-          </motion.button>
+          <motion.button>WHAT WE DO?</motion.button>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
+        <motion.div className="box">
           <h2>Branding</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
@@ -67,13 +62,7 @@ const Services = () => {
           </p>
           <button>Go</button>
         </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{
-            background: "lightgray",
-            color: "black",
-          }}
-        >
+        <motion.div className="box">
           <h2>Branding</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
@@ -83,10 +72,7 @@ const Services = () => {
           </p>
           <button>Go</button>
         </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
+        <motion.div className="box">
           <h2>Branding</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
