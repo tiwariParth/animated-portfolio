@@ -18,8 +18,8 @@ const variants = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
-      staggerChildren: 0.5,
+      duration: 0.2,
+      staggerChildren: 0.1,
     },
   },
 };
@@ -81,9 +81,6 @@ export const Hero = () => {
                   className={
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
-                  variants={variants}
-                  initial="initial"
-                  whileInView={"animate"}
                 >
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>
