@@ -1,16 +1,15 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import {
   motion,
   useScroll,
-  useSpring,
   useTransform,
   useInView,
+  useSpring,
 } from "framer-motion";
-import "./portfolio.scss";
 import video1 from "../../assests/video.mp4";
 import video2 from "../../assests/video2.mp4";
 import video3 from "../../assests/video3.mp4";
-// import { motion, useScroll, useSpring } from "framer-motion";
+import "./portfolio.scss";
 
 const items = [
   {
@@ -70,8 +69,8 @@ const Single = ({ item }) => {
       opacity: 1,
       x: 0,
       transition: {
-        delay: i * 0.3,
-        duration: 0.5,
+        delay: i * 0.1,
+        duration: 0.2,
       },
     }),
   };
@@ -91,7 +90,7 @@ const Single = ({ item }) => {
               variants={videoVariants}
               ref={videoRefs[index]}
             >
-              <video src={video} autoPlay loop muted></video>
+              <video src={video} autoPlay loop muted controls></video>
             </motion.div>
           ))}
         </div>
