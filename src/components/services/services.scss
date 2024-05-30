@@ -3,20 +3,19 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1px;
   justify-content: space-between;
-  padding-bottom: 30px;
+  //   padding-bottom: 30px;
   .textContainer {
-    max-width: 1024px;
-    margin-top: 1rem;
     flex: 1;
     align-self: flex-end;
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    gap: 10px;
     p {
       font-weight: 200;
-      font-size: 20px;
+      font-size: 14px;
       color: gray;
       text-align: right;
     }
@@ -31,32 +30,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    // margin-bottom: -100px;
     .title {
       display: flex;
-      gap: 50px;
+      gap: 10px;
       align-items: center;
 
       img {
-        width: 300px;
-        height: 100px;
+        width: 250px;
+        height: 60px;
         border-radius: 50px;
         object-fit: cover;
       }
 
       h1 {
-        font-size: 76px;
+        font-size: 65px;
         color: white;
         font-weight: 100;
       }
 
       button {
-        width: 300px;
-        height: 100px;
+        width: 250px;
+        height: 60px;
         background-color: #ff9f1c;
         color: white;
         border-radius: 50px;
-        font-size: 24px;
+        font-size: 17px;
         border: none;
       }
     }
@@ -66,16 +65,15 @@
     display: flex;
     max-width: 1024px;
     margin: auto;
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
     .box {
-      padding: 12px 30px;
+      padding: 50px;
       border: 0.5px solid gray;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
-      text-align: justify;
+      text-align: left;
 
       button {
         padding: 10px;
