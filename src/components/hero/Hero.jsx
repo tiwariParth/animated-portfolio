@@ -73,7 +73,7 @@ export const Hero = () => {
   return (
     <motion.section className="banner" id="home">
       <Container>
-        <motion.Row className="aligh-items-center rows">
+        <Row className="aligh-items-center rows">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) => (
@@ -124,7 +124,7 @@ export const Hero = () => {
               )}
             </TrackVisibility>
           </Col>
-        </motion.Row>
+        </Row>
       </Container>
     </motion.section>
   );
