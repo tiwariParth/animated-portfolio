@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import {
   motion,
   useScroll,
@@ -22,11 +22,11 @@ const items = [
     title: "YouTube Shorts",
     videos: [video1, video2, video3],
   },
-  {
-    id: 3,
-    title: "TikTok Videos",
-    videos: [video1, video2, video3],
-  },
+  // {
+  //   id: 3,
+  //   title: "TikTok Videos",
+  //   videos: [video1, video2, video3],
+  // },
 ];
 
 const Portfolio = () => {
@@ -39,6 +39,7 @@ const Portfolio = () => {
     stiffness: 100,
     damping: 30,
   });
+
   return (
     <div className="portfolio" ref={ref}>
       <div className="progress">
@@ -78,7 +79,7 @@ const Single = ({ item }) => {
   return (
     <section ref={ref}>
       <div className="container">
-        <div className="wrapper" style={{ y: y }}>
+        <div className="wrapper" style={{ y }}>
           <h2>{item.title}</h2>
           {item.videos.map((video, index) => (
             <motion.div

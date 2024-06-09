@@ -87,13 +87,12 @@
   .slidingContainer{
     position: absolute;
     font-size: 13rem;
-    bottom:-70px;
+    bottom:-100px;
     white-space: nowrap;
     color: #fffefe1a;
     width: 50%;
-    // height: 50%;
+    height: 50%;
     font-weight: bold;
-    z-index: 0;
     // line-height: 20rem;
   }
 }
