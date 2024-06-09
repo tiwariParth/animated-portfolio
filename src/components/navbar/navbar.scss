@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .navbar {
     height: clamp(50px, 8vh, 70px); /* Responsive height */
     width: 100%;
@@ -23,10 +25,18 @@
       justify-content: space-between;
       align-items: center;
       height: 100%;
+      @include mobile{
+        justify-content: flex-end;
+        padding: 10px;
+      }
   
       span {
         font-weight: bold;
         font-size: clamp(16px, 2vw, 24px); /* Responsive font size */
+
+        @include mobile{
+          display: none;
+        }
       }
   
       .social {

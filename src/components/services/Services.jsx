@@ -25,10 +25,7 @@ const Services = () => {
   return (
     <motion.div
       className="services"
-      variants={variants}
-      initial="inital"
-      ref={ref}
-      animate={isInView && "animate"}
+      
     >
       <motion.div className="textContainer" variants={variants}>
         <motion.p>
