@@ -9,6 +9,9 @@ import {
 import video1 from "../../assests/video.mp4";
 import video2 from "../../assests/video2.mp4";
 import video3 from "../../assests/video3.mp4";
+import video4 from "../../assests/video4.mp4";
+import video5 from "../../assests/video5.mp4";
+import video6 from "../../assests/video6.mp4";
 import "./portfolio.scss";
 
 const items = [
@@ -20,13 +23,8 @@ const items = [
   {
     id: 2,
     title: "YouTube Shorts",
-    videos: [video1, video2, video3],
+    videos: [video4, video5, video6],
   },
-  // {
-  //   id: 3,
-  //   title: "TikTok Videos",
-  //   videos: [video1, video2, video3],
-  // },
 ];
 
 const Portfolio = () => {
@@ -80,7 +78,12 @@ const Single = ({ item }) => {
     <section ref={ref}>
       <div className="container">
         <div className="wrapper" style={{ y }}>
-          <h2>{item.title}</h2>
+          <div>
+            <h2>{item.title}</h2>
+            <button>
+              <a href="">View More</a>
+            </button>
+          </div>
           {item.videos.map((video, index) => (
             <motion.div
               className="videoContainer"

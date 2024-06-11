@@ -1,7 +1,7 @@
 import React from "react";
 import "./hero.scss";
 import { motion } from "framer-motion";
-
+import video1 from "../../assests/video.mp4"
 const slideVariants = {
   initial: {
     x: 0,
@@ -76,7 +76,7 @@ const Hero = () => {
         Your Buissness My Creativity
       </motion.div>
       <div className="imageContainer">
-        <img src="/hero.png" alt="" />
+        <video src={video1} autoPlay loop muted></video>
       </div>
     </div>
   );
