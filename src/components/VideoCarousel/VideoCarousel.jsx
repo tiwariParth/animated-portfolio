@@ -27,13 +27,13 @@ const VideoCarousel = () => {
         {videoProperties.map((item) => (
           <Carousel.Item key={item.id}>
             <ReactPlayer
+              className="video"
               url={item.video}
               playing={true}
               loop={true}
               muted={true}
               width="100%"
               height="100%"
-              borderRadius="10px"
             />
           </Carousel.Item>
         ))}
