@@ -81,7 +81,9 @@ const Single = ({ item }) => {
           <div>
             <h2>{item.title}</h2>
             <button>
-              <a href="">View More</a>
+              <a href="https://vimeo.com/mukeshedits" target="_blank">
+                View More
+              </a>
             </button>
           </div>
           {item.videos.map((video, index) => (

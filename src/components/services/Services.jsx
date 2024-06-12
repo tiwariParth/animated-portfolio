@@ -23,10 +23,7 @@ const Services = () => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
   return (
-    <motion.div
-      className="services"
-      
-    >
+    <motion.div className="services">
       <motion.div className="textContainer" variants={variants}>
         <motion.p>
           I foucs on helping your brand grow <br /> and move forward.
@@ -50,34 +47,40 @@ const Services = () => {
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
         <motion.div className="box">
-          <h2>Branding</h2>
+          <h2>Reels on Demand</h2>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-            facilis facere, perferendis commodi, odio perspiciatis, quidem alias
-            aspernatur aut minus natus dolorem expedita ducimus error.
-            Temporibus optio provident quasi nesciunt.
+            Boost your Instagram engagement with stunning, high-quality reels!
+            As a freelance video editor, I specialize in creating eye-catching
+            reels that captivate your audience and elevate your brand. Let’s
+            turn your content into scroll-stopping videos!
           </p>
-          <button>Go</button>
+          <button>
+            <a href="https://vimeo.com/mukeshedits">Go</a>
+          </button>
         </motion.div>
         <motion.div className="box">
-          <h2>Branding</h2>
+          <h2>YouTube Shorts</h2>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-            facilis facere, perferendis commodi, odio perspiciatis, quidem alias
-            aspernatur aut minus natus dolorem expedita ducimus error.
-            Temporibus optio provident quasi nesciunt.
+            Transform your YouTube Shorts into viral hits! I edit compelling,
+            fast-paced shorts that keep viewers hooked and boost your channel’s
+            growth. Elevate your content with professional editing that
+            maximizes engagement and impact!
           </p>
-          <button>Go</button>
+          <button>
+            <a href="https://vimeo.com/mukeshedits">Go</a>
+          </button>
         </motion.div>
         <motion.div className="box">
-          <h2>Branding</h2>
+          <h2>Thumbnails and Posts</h2>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-            facilis facere, perferendis commodi, odio perspiciatis, quidem alias
-            aspernatur aut minus natus dolorem expedita ducimus error.
-            Temporibus optio provident quasi nesciunt.
+            Make a lasting first impression with custom YouTube and Instagram
+            thumbnails and Posts! I design vibrant, clickable thumbnails that
+            drive views and enhance your channel’s appeal. Let’s create
+            thumbnails that stand out and attract your audience instantly!
           </p>
-          <button>Go</button>
+          <button>
+            <a href="https://vimeo.com/mukeshedits">Go</a>
+          </button>
         </motion.div>
       </motion.div>
     </motion.div>
