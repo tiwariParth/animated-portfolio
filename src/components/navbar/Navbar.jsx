@@ -32,7 +32,7 @@ const Navbar = () => {
         <motion.span>Mukesh Choudhary</motion.span>
         <div className="social">
           <a href="#">
-            <img src="/facebook.png" alt="Facebook" />
+            <img src="/linkedin.svg" alt="Linkedin" />
           </a>
           <a href="#">
             <img src="/instagram.png" alt="Instagram" />
@@ -41,7 +41,7 @@ const Navbar = () => {
             <img src="/youtube.png" alt="YouTube" />
           </a>
           <a href="#">
-            <img src="/dribbble.png" alt="Dribbble" />
+            <img src="/vimeo-color-svgrepo-com.svg" alt="Dribbble" />
           </a>
         </div>
       </div>
