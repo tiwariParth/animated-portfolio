@@ -23,7 +23,7 @@ const VideoCarousel = () => {
   ];
   return (
     <div className="carousel">
-      <Carousel nextIcon prevIcon activeIndex={2}>
+      <Carousel>
         {videoProperties.map((item) => (
           <Carousel.Item key={item.id}>
             <ReactPlayer
