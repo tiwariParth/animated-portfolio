@@ -10,6 +10,11 @@
     height: 100%;
     margin: auto;
 
+    @include mobile{
+      padding: 0 20px;
+      margin-top: -3rem;
+    }
+
     .textContainer{
       width: 50%;
       margin-top: 1rem;
@@ -20,6 +25,7 @@
       gap: 30px;
 
       @include mobile{
+        margin-top: 20px;
         height: 70%;
         width: 100%;
         align-items: center;
@@ -65,13 +71,11 @@
     top: 0;
     right: 0;
 
-    video{
+    VideoCarousel{
       margin-top: 5rem;
       height: 80%;
       width: 100%;
       object-fit: cover;
-      margin-right: 7rem;
-      border-radius: 15px;
       @include mobile{
         object-fit: contain;
         margin-top: 4rem;
@@ -80,7 +84,7 @@
     }
 
     @include mobile{
-      height: 50%;
+      height: 60%;
       width: 100%;
       flex-direction: column;
       top: unset;
