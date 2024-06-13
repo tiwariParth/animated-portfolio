@@ -2,6 +2,7 @@ import React from "react";
 import "./hero.scss";
 import { motion } from "framer-motion";
 import VideoCarousel from "../VideoCarousel/VideoCarousel";
+
 const slideVariants = {
   initial: {
     x: 0,
@@ -73,7 +74,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Your Buissness My Creativity
+        Your Business My Creativity
       </motion.div>
       <div className="imageContainer">
         <VideoCarousel />

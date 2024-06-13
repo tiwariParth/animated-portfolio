@@ -47,7 +47,7 @@ const Sidebar = () => {
       ref={sidebarRef}
     >
       <motion.div className="bg" variants={variants}>
-        <Links />
+        <Links setOpen={setOpen} />
       </motion.div>
       <Toggle setOpen={setOpen} />
     </motion.div>

@@ -3,15 +3,18 @@ import {
   motion,
   useScroll,
   useTransform,
-  useInView,
   useSpring,
+  useInView,
 } from "framer-motion";
+import { Carousel } from "react-bootstrap";
+import { useMediaQuery } from "react-responsive";
 import video1 from "../../assests/video.mp4";
 import video2 from "../../assests/video2.mp4";
 import video3 from "../../assests/video3.mp4";
 import video4 from "../../assests/video4.mp4";
 import video5 from "../../assests/video5.mp4";
 import video6 from "../../assests/video6.mp4";
+import ReactPlayer from "react-player";
 import "./portfolio.scss";
 
 const items = [
@@ -38,15 +41,21 @@ const Portfolio = () => {
     damping: 30,
   });
 
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   return (
     <div className="portfolio" ref={ref}>
-      <div className="progress">
+      <div className="heading">
         <h1>Featured Work</h1>
-        <motion.div style={{ scaleX }} className="progressBar"></motion.div>
+        <motion.div
+          className="progressBar"
+          style={{ scaleX }}
+          transition={{ duration: 0.8 }}
+        ></motion.div>
       </div>
-      {items.map((item) => (
-        <Single item={item} key={item.id} />
-      ))}
+      {isMobile
+        ? items.map((item) => <VideoCarousel item={item} key={item.id} />)
+        : items.map((item) => <Single item={item} key={item.id} />)}
     </div>
   );
 };
@@ -81,7 +90,11 @@ const Single = ({ item }) => {
           <div>
             <h2>{item.title}</h2>
             <button>
-              <a href="https://vimeo.com/mukeshedits" target="_blank">
+              <a
+                href="https://vimeo.com/mukeshedits"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 View More
               </a>
             </button>
@@ -102,6 +115,39 @@ const Single = ({ item }) => {
         </div>
       </div>
     </section>
+  );
+};
+
+const VideoCarousel = ({ item }) => {
+  return (
+    <div className="carousel-wrapper">
+      <h2>{item.title}</h2>
+      <Carousel>
+        {item.videos.map((video, index) => (
+          <Carousel.Item key={index}>
+            <ReactPlayer
+              className="video"
+              url={video}
+              playing={true}
+              loop={true}
+              muted={true}
+              controls
+              width="100%"
+              height="100%"
+            />
+          </Carousel.Item>
+        ))}
+      </Carousel>
+      <button className="view-more">
+        <a
+          href="https://vimeo.com/mukeshedits"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View More
+        </a>
+      </button>
+    </div>
   );
 };
 
