@@ -63,6 +63,7 @@
       }
       img {
         width: 50px;
+        margin-bottom: 1rem;
       }
     }
   }
@@ -79,7 +80,7 @@
 
     @include mobile {
       height: 60%;
-      width: 100%;
+      width: 80%;
       flex-direction: column;
       top: unset;
       bottom: 0;
@@ -95,7 +96,7 @@
 
       @include mobile {
         object-fit: contain;
-        margin-top: 4rem;
+        margin-top: 5rem;
         border-radius: 25px;
       }
     }
