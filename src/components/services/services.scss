@@ -117,7 +117,7 @@
       flex-direction: column;
       width: 100%;
     }
-    // margin-bottom: 1rem;
+
     .box {
       padding: 50px;
       border: 0.5px solid gray;
@@ -138,6 +138,17 @@
       @include mobile {
         border: none;
         padding: 20px;
+      }
+
+      h2{
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: yellow;
+        backdrop-filter: blur(200px);
+
+        @include mobile {
+          font-size: 24px;
+        }
       }
 
       p{
