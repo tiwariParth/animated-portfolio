@@ -29,15 +29,17 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_812ulol", "template_h7yl5zj", form.current, {
+      .sendForm("service_812ulol", "template_h7yl5zj", formRef.current, {
         publicKey: "LB5N1bBf-doB_T_cM",
       })
       .then(
         () => {
           setError(false);
+          setSuccess(true);
         },
         (error) => {
           setError(true);
+          setSuccess(false);
         }
       );
   };
@@ -107,7 +109,7 @@ const Contact = () => {
           <input type="email" required placeholder="Email" name="email" />
           <textarea rows={8} placeholder="Message" name="message" />
           <button type="submit">Submit</button>
-          {error && "error"}
+          {error && "Error"}
           {success && "Success"}
         </motion.form>
       </motion.div>

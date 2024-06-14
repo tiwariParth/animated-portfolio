@@ -1,18 +1,19 @@
 @import "../../app.scss";
 
 .contact {
-  max-width: 1024px;
-  height: 100vh;
+  max-width: 1366px;
+  min-height: 100vh; // Changed from height to min-height
   display: flex;
-  //   justify-content: center;
-  gap: 50px;
+  gap: 10px;
   align-items: center;
+  justify-content: center;
   margin: auto;
 
   @include mobile {
     width: 100%;
     padding: 10px;
     flex-direction: column;
+    overflow-y: auto; // Allow vertical scrolling if content overflows
   }
 
   .textContainer {
@@ -22,18 +23,20 @@
     gap: 40px;
 
     @include mobile {
-      gap: 20px;
+      gap: 10px;
       text-align: center;
       align-items: center;
-      margin-top: 70px;
+      margin-top: 30px;
+      background: transparent;
     }
 
     div {
       backdrop-filter: blur(200px);
     }
+
     h1 {
-      font-size: 5rem;
-      line-height: 88px;
+      font-size: 6rem;
+      line-height: 98px;
 
       @include mobile {
         font-size: 3rem;
@@ -42,7 +45,12 @@
     }
 
     span {
-      font-weight: 300;
+      font-size: 2rem;
+      font-weight: 400;
+
+      @include mobile {
+        font-size: 1rem;
+      }
     }
   }
 
@@ -50,38 +58,46 @@
     flex: 1;
     position: relative;
     backdrop-filter: blur(200px);
+    
     .phoneSvg {
       margin: auto;
       position: absolute;
       z-index: -1;
-    }
 
-    @include mobile{
-      width: 100%;
-      padding: 50px;
-      transform: none;
-      svg{
-        display:none;
+      @include mobile {
+        display: none;
       }
     }
+
+    @include mobile {
+      width: 100%;
+      height: 100%;
+      padding: 50px;
+    }
+
     form {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      input {
-        padding: 10px;
+      gap: 40px;
+
+      @include mobile{
+        height: 80vh;
+        backdrop-filter: none;
+        background: transparent;
+      }
+
+      input, textarea {
+        padding: 15px 30px;
         background: transparent;
         border: 1px solid #fff;
         color: #fff;
         border-radius: 5px;
       }
+
       textarea {
         padding: 10px;
-        background: transparent;
-        border: 1px solid #fff;
-        color: #fff;
-        border-radius: 5px;
       }
+
       button {
         padding: 10px;
         background: transparent;
@@ -91,13 +107,10 @@
         cursor: pointer;
         font-weight: 300;
         transition: all 0.3s ease;
+
         &:hover {
           background: greenyellow;
           color: #000;
-        }
-
-        @include mobile {
-          padding: 10px;
         }
       }
     }
