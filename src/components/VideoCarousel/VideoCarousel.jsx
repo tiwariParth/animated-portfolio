@@ -28,7 +28,7 @@ const VideoCarousel = () => {
           <Carousel.Item key={item.id}>
             <ReactPlayer
               className="video"
-              url={item.video}
+              url={"https://www.youtube.com/watch?v=-4fyyyQjsz8"}
               playing={true}
               loop={true}
               muted={true}
