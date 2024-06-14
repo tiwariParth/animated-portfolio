@@ -69,13 +69,13 @@
 
   .imageContainer {
     display: flex;
-    justify-content: center;  /* Center the carousel horizontally */
-    align-items: center;     /* Center the carousel vertically */
+    justify-content: center;
+    align-items: center;     
     height: 180%;
     position: absolute;
     top: 0;
     right: 0;
-    transform: translateX(-50%);  /* Adjust centering */
+    transform: translateX(-50%);
 
     @include mobile {
       height: 60%;
@@ -90,7 +90,7 @@
       margin-top: 6rem;
       height: 80%;
       width: 100%;
-      max-width: 600px;  /* Set a max-width for the carousel */
+      max-width: 600px;
       object-fit: cover;
 
       @include mobile {
@@ -110,6 +110,5 @@
     width: 50%;
     height: 50%;
     font-weight: bold;
-    // line-height: 20rem;
   }
 }
