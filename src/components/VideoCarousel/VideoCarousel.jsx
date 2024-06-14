@@ -1,8 +1,5 @@
 import "./videoCarousel.scss";
 import { Carousel } from "react-bootstrap";
-import video1 from "../../assests/video7.mp4";
-import video2 from "../../assests/video8.mp4";
-import video3 from "../../assests/video9.mp4";
 import ReactPlayer from "react-player";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -10,17 +7,18 @@ const VideoCarousel = () => {
   const videoProperties = [
     {
       id: 1,
-      video: video1,
+      video: "https://www.youtube.com/shorts/7c8NVvDMWX8?feature=share",
     },
     {
       id: 2,
-      video: video2,
+      video: "https://www.youtube.com/shorts/fV_ESJtDpr0?feature=share",
     },
     {
       id: 3,
-      video: video3,
+      video: "https://www.youtube.com/shorts/_CuMUS3l4rI?feature=share",
     },
   ];
+
   return (
     <div className="carousel">
       <Carousel>
@@ -28,12 +26,13 @@ const VideoCarousel = () => {
           <Carousel.Item key={item.id}>
             <ReactPlayer
               className="video"
-              url={"https://www.youtube.com/watch?v=-4fyyyQjsz8"}
+              url={item.video}
               playing={true}
               loop={true}
-              muted={true}
+              controls
               width="100%"
               height="100%"
+              muted={true}
             />
           </Carousel.Item>
         ))}

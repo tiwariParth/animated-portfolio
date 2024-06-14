@@ -8,12 +8,6 @@ import {
 } from "framer-motion";
 import { Carousel } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
-import video1 from "../../assests/video.mp4";
-import video2 from "../../assests/video2.mp4";
-import video3 from "../../assests/video3.mp4";
-import video4 from "../../assests/video4.mp4";
-import video5 from "../../assests/video5.mp4";
-import video6 from "../../assests/video6.mp4";
 import ReactPlayer from "react-player";
 import "./portfolio.scss";
 
@@ -21,12 +15,20 @@ const items = [
   {
     id: 1,
     title: "Instagram Reels",
-    videos: [video1, video2, video3],
+    videos: [
+      "https://www.youtube.com/shorts/mppG4fkMeKI?feature=share",
+      "https://www.youtube.com/shorts/XvKPrXvwIHY?feature=share",
+      "https://www.youtube.com/shorts/--eVrzf2zQo?feature=share",
+    ],
   },
   {
     id: 2,
     title: "YouTube Shorts",
-    videos: [video4, video5, video6],
+    videos: [
+      "https://www.youtube.com/shorts/sJiTMkwTwio?feature=share",
+      "https://www.youtube.com/shorts/vMLjvCRixjo?feature=share",
+      "https://www.youtube.com/shorts/U8d496w5zCM?feature=share",
+    ],
   },
 ];
 
@@ -109,7 +111,15 @@ const Single = ({ item }) => {
               variants={videoVariants}
               ref={videoRefs[index]}
             >
-              <video src={video} autoPlay loop muted controls></video>
+              <ReactPlayer
+                url={video}
+                playing
+                loop
+                muted
+                controls
+                width="100%"
+                height="100%"
+              />
             </motion.div>
           ))}
         </div>
